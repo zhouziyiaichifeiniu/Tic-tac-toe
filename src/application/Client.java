@@ -16,23 +16,27 @@ public class Client extends Application {
 
   @Override
   public void start(Stage primaryStage) throws Exception {
-    this.primaryStage = primaryStage;
-    FXMLLoader fxmlLoader = new FXMLLoader();
-    fxmlLoader.setLocation(getClass().getClassLoader().getResource("mainUI.fxml"));
-    Pane root = fxmlLoader.load();
-    primaryStage.setTitle("Java2 Assingment2 Socket Programming");
-    primaryStage.setScene(new Scene(root));
-    primaryStage.setResizable(false);
-    primaryStage.show();
+    try {
+      System.out.println("User login interface");
+      FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getClassLoader().getResource("startup.fxml"));
+      Pane root = fxmlLoader.load();
+       primaryStage.setTitle("start");
+      primaryStage.setScene(new Scene(root));
+        primaryStage.setResizable(false);
+      primaryStage.show();
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
   }
 
   @Override
   public void stop() {
     printWriter.println("Disconnect");
     System.out.println("Not today");
-    printWriter.flush();
+      printWriter.flush();
     printWriter.close();
-    try {
+      try {
       bufferedReader.close();
     } catch (IOException e) {
       System.out.println("Bufferedreader connot be closed");
