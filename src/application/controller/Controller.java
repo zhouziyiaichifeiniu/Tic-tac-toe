@@ -27,11 +27,11 @@ import static javafx.application.Platform.*;
 @SuppressWarnings("all")
 public class Controller implements Initializable {
   private static final int PLAY_1 = 1;
-  private static final int PLAY_2 = 2;
+    private static final int PLAY_2 = 2;
   private static final int EMPTY = 0;
   private static final int BOUND = 90;
-  private static final int OFFSET = 15;
-  public static int ID = 0;
+    private static final int OFFSET = 15;
+    public static int ID = 0;
 
   public static int getPlay1() {
     return PLAY_1;
