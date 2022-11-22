@@ -19,11 +19,11 @@ public class Client extends Application {
     try {
       System.out.println("User login interface");
       FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(getClass().getClassLoader().getResource("startup.fxml"));
+      fxmlLoader.setLocation(getClass().getClassLoader().getResource("startup.fxml"));
       Pane root = fxmlLoader.load();
-       primaryStage.setTitle("start");
+      primaryStage.setTitle("start");
       primaryStage.setScene(new Scene(root));
-        primaryStage.setResizable(false);
+      primaryStage.setResizable(false);
       primaryStage.show();
     } catch (Exception e) {
       e.printStackTrace();
@@ -34,9 +34,9 @@ public class Client extends Application {
   public void stop() {
     printWriter.println("Disconnect");
     System.out.println("Not today");
-      printWriter.flush();
+    printWriter.flush();
     printWriter.close();
-      try {
+    try {
       bufferedReader.close();
     } catch (IOException e) {
       System.out.println("Bufferedreader connot be closed");

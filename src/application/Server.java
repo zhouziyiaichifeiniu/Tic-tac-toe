@@ -15,10 +15,10 @@ import static java.lang.System.exit;
 @SuppressWarnings("all")
 public class Server {
   public static int ID = 0;
-   public static int port = 20052;
+  public static int port = 20052;
   public static ServerSocket serverSocket;
   public static ArrayList<BufferedReader> bufferedReaders = new ArrayList<>();
-   public static ArrayList<PrintWriter> printWriters = new ArrayList<>();
+  public static ArrayList<PrintWriter> printWriters = new ArrayList<>();
   public static ArrayList<String> message = new ArrayList<>();
   private static final int[][] chessBoard = new int[3][3];
   public static int draw = 0;
@@ -31,7 +31,7 @@ public class Server {
     Server.ID = ID;
   }
 
-    public static int getPort() {
+  public static int getPort() {
     return port;
   }
 
@@ -40,15 +40,15 @@ public class Server {
   }
 
   public static ServerSocket getServerSocket() {
-      return serverSocket;
+    return serverSocket;
   }
 
   public static void setServerSocket(ServerSocket serverSocket) {
-      Server.serverSocket = serverSocket;
-    }
+    Server.serverSocket = serverSocket;
+  }
 
   public static ArrayList<BufferedReader> getBufferedReaders() {
-     return bufferedReaders;
+    return bufferedReaders;
   }
 
   public static void setBufferedReaders(ArrayList<BufferedReader> bufferedReaders) {
@@ -56,7 +56,7 @@ public class Server {
   }
 
   public static ArrayList<PrintWriter> getPrintWriters() {
-     return printWriters;
+    return printWriters;
   }
 
   public static void setPrintWriters(ArrayList<PrintWriter> printWriters) {
