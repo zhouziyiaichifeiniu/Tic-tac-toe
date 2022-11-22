@@ -10,11 +10,11 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
+            System.out.println("User login interface" );
             FXMLLoader fxmlLoader = new FXMLLoader();
-
-            fxmlLoader.setLocation(getClass().getClassLoader().getResource("mainUI.fxml"));
+            fxmlLoader.setLocation(getClass().getClassLoader().getResource("startup.fxml"));
             Pane root = fxmlLoader.load();
-            primaryStage.setTitle("Tic Tac Toe");
+            primaryStage.setTitle("start");
             primaryStage.setScene(new Scene(root));
             primaryStage.setResizable(false);
             primaryStage.show();
